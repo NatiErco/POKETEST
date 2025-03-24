@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Pokemon";
+    src: url("fonts/Pokemon Solid.ttf") format("truetype");
+}
+
+.pokemon-title {
+    font-family: "Pokemon", sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffcb05; /* Amarillo Pokémon */
+    text-shadow: 
+        -3px -3px 0 #2a75bb,  
+        3px -3px 0 #2a75bb,  
+        -3px 3px 0 #2a75bb,  
+        3px 3px 0 #2a75bb; /* Azul Pokémon */
+}
+.card {
+    width: 100px !important;
+    height: 100px !important;
+    margin: 2px !important;  /* Reduce el espacio entre cartas */
+    cursor: pointer !important;
+
+    border: 2px solid #ffcc00 !important;
+    background-color: #fff !important;
+    perspective: 1000px!important;
+}
+.card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+}
+
+#game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px; /* Ajusta este valor según el tamaño de las cartas */
+    margin: auto;
+}
+
+.matched {
+    filter: brightness(0.7); /* Hace la carta un 30% más oscura */
+    pointer-events: none; /* Evita que se sigan clickeando */
+  }
+
+  .win-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 10px;
+    display: none; /* Asegura que no aparezca al inicio */
+    z-index: 999; /* Asegura que aparezca encima de otros elementos */
+}
+
+.win-message.show {
+    display: block; /* Hace visible el mensaje cuando se gana */
+}
