@@ -13,7 +13,7 @@ const pokemonImages = [
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png", // Snorlax
 ];
 
-// Duplicamos las imágenes para hacer pares 
+// Duplicamos las imágenes para hacer pares
 let card = [...pokemonImages, ...pokemonImages];
 
 // sort ordena los elementos de forma aleatoria cada vez que el juego inicia.
@@ -36,4 +36,39 @@ card.forEach((image) => {
         </div>
     `;
   gameBoard.appendChild(card); //Agrega la card al contenedor con id="game-board" en el HTML.
+});
+
+
+
+// --------------------------------------------------------------------------------------------------------------------                  FUNCIONALIDAD PARA USAR EL BOTON DE MODO CLARO A MODO OSCURO MANUALMENTE: -----------------------------------------------------------------------------------------------------------------------
+
+// Primero busco el elemento con el id "" en mi html y lo almaceno en una variable
+
+const modoOscuroBtn = document.getElementById("modoOscuroBtn");
+
+// Este if es importante, porque cuando el usuario refresque la pagina, no tendra que volver a cambiar a luna o sol sino que se almacena la info en localstorage.
+
+if (localStorage.getItem("modoOscuro") === "activado") {
+  document.body.classList.add("modo-oscuro");
+  modoOscuroBtn.innerHTML = "🌙"; // Cambia el icono a sol
+} else {
+    modoOscuroBtn.innerHTML = "☀️"; // Mostrar luna porque el usuario PUEDE activar el modo oscuro
+};
+
+
+// Funcion al hacer click
+
+// Función para alternar el modo a oscuro y viceversa
+// espera a que el usuario haga clic en el botón y ejecuta la funcion dentro de las llaves
+modoOscuroBtn.addEventListener("click", () => {
+  document.body.classList.toggle("modo-oscuro"); // la agrega si no esta, o la quita si esta.
+
+
+if (document.body.classList.contains("modo-oscuro")) {
+  localStorage.setItem("modoOscuro", "activado");
+  modoOscuroBtn.innerHTML = "🌙";
+} else {
+  localStorage.setItem("modoOscuro", "desactivado");
+  modoOscuroBtn.innerHTML = "☀️";
+}
 });

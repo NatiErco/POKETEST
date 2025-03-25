@@ -61,3 +61,13 @@
 .win-message.show {
     display: block; /* Hace visible el mensaje cuando se gana */
 }
+
+.modo-oscuro {
+    background-color: #000;
+    color: #fff;
+}
+
+.modo-oscuro .btn-outline-light {
+    border-color: #fff; /* Borde blanco en modo oscuro */
+    color: #fff;
+}
