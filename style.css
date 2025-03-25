@@ -35,7 +35,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 500px; /* Ajusta este valor según el tamaño de las cartas */
+    max-width: 450px; /* Ajusta este valor según el tamaño de las cartas */
     margin: auto;
 }
 
@@ -52,7 +52,7 @@
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 20px;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 10px;
     display: none; /* Asegura que no aparezca al inicio */
     z-index: 999; /* Asegura que aparezca encima de otros elementos */
