@@ -19,7 +19,7 @@ function resetGame() {
 
     card.innerHTML = `
           <div class="card p-2 position-relative" onclick=flipCard(this)>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" class="img-fluid front" alt="dorso">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.hUl-bDTG1mfq3FIIj_oRmQHaHa&pid=Api" class="img-fluid front" alt="dorso">
             <img src="${image}" class="img-fluid back d-none" alt="pokemon">
           </div>
         `;
